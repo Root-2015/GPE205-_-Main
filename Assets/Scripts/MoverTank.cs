@@ -20,4 +20,11 @@ public class MoverTank : Mover
 		transform.Rotate(0,rotateDirection.x*(pawn.turnSpeed* Time.deltaTime),0);
 	}
 
+
+	public override void RotateTowards(Vector3 position, float turnSpead)
+	{
+	   Vector3 vectorToTarget = position - transform.position;
+	   Quaternion lookRotation = Quaternion.LookRotation(vectorToTarget);
+	   transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, pawn.turnSpeed * Time.deltaTime);
+	}
 }

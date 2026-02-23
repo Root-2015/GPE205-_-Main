@@ -5,6 +5,7 @@ public abstract class Controller : MonoBehaviour
 	public Pawn pawn;
 	
 	public abstract void MakeDecisions();
+	public abstract void OnDestroy();
 
 	public void Possess(Pawn pawnToPossess) 
 	{

@@ -10,10 +10,13 @@ public abstract class Pawn : MonoBehaviour
 	public abstract void Shoot();
 	public float moveSpeed;
 	public float turnSpeed;
-
+	public abstract void OnDestroy();
+	public abstract void RotateTowards (Vector3 position);
+	public NoicceMaker noiceMaker;
 	
 	public virtual void Start()
 	{
+		noiceMaker = GetComponent<NoicceMaker>();	
 		mover = GetComponent<Mover>();
 	}
 }
