@@ -20,6 +20,7 @@ public override void Start()
 	{
 	pawn = GetComponent<Pawn>();
 	transitionChangeTime = Time.deltaTime;
+	target = GameObject.Find("Player(Clone)").GetComponent<Transform>();
 	}
 
 
