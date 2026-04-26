@@ -716,6 +716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8142197991392297428}
   - component: {fileID: 4630771665528094289}
+  - component: {fileID: -5131188456947692920}
   m_Layer: 0
   m_Name: Tile Variant 2
   m_TagString: Untagged
@@ -760,6 +761,18 @@ MonoBehaviour:
   doorEast: {fileID: 244618370994669172}
   doorSouth: {fileID: 8676393404069153772}
   doorWest: {fileID: 1401786413806841473}
+--- !u!114 &-5131188456947692920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3152413817515911800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515ebf9d76f0e114cbd15fe67beedf43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NotIndestructable
 --- !u!1 &4484568695132270302
 GameObject:
   m_ObjectHideFlags: 0

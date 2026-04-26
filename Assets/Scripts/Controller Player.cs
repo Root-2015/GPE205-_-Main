@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 public class ControllerPlayer : Controller
 {
 	public InputActionAsset inputActions;
-
+	public UIManager uiManager;
+	public GameManager manager;
 
 	public override void MakeDecisions()
 	{
@@ -21,14 +22,17 @@ public class ControllerPlayer : Controller
 
 	public override void Start()
 	{
-	GameManager.instance.players.Add(this);
-	
-	base.Start();
-	}
+        manager = FindObjectOfType<GameManager>();
+		GameManager.instance.players.Add(this);
+        uiManager = GameObject.Find("All Managers").GetComponent<UIManager>();
+        base.Start();
+    }
 
 	public override void OnDestroy()
 	{
-	GameManager.instance.players.Remove(this);
-	Destroy(gameObject);
+		GameManager.instance.players.Remove(this);
+		uiManager.ActivateGameOver();
+        manager.DestroyAllObjects();
+		Destroy(gameObject);
 	}
 }

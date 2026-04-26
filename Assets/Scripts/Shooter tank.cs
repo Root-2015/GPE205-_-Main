@@ -27,6 +27,8 @@ public class Shootertank : Shooter
 	GameObject bulletObject = Instantiate<GameObject>(bulletPrefab, muzzleLocation.position, muzzleLocation.rotation);
 	Rigidbody rb = bulletObject.GetComponent<Rigidbody>();
 	rb.AddForce(muzzleLocation.forward * pawn.shootForce);
+    BulletOwner BulletSpawnOwner = bulletObject.GetComponent<BulletOwner>();
+    BulletSpawnOwner.DetermainOwner(this);
     }
 
 }

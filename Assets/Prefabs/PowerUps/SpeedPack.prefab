@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6047217674786963795}
   - component: {fileID: 3877003731435300689}
   - component: {fileID: 1012324668504005095}
+  - component: {fileID: 7924950588794050916}
   m_Layer: 0
   m_Name: SpeedPack
   m_TagString: Untagged
@@ -71,6 +72,18 @@ MonoBehaviour:
   powerup:
     lifeSpan: 10
     SpeedBoostAmount: 3
+--- !u!114 &7924950588794050916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6299822340966491828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515ebf9d76f0e114cbd15fe67beedf43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NotIndestructable
 --- !u!1 &9047222020317391537
 GameObject:
   m_ObjectHideFlags: 0

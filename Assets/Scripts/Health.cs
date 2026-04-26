@@ -5,18 +5,22 @@ public class Health : MonoBehaviour
 	[HideInInspector]public float currentHealth;
 	public float maxHealth;
 	public Pawn pawn;
+	public HealthBar healthBar;
+	public float score;
+	public ScoreManager scoreKeeper;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-	pawn = GetComponent<Pawn>();
+        scoreKeeper = FindObjectOfType<ScoreManager>();
+        pawn = GetComponent<Pawn>();
         currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void scoreGoal(float amount)
     {
-        
+        score = score + amount;
     }
+
 
     public void TakeDamage (float amount) 
 	{
@@ -25,12 +29,15 @@ public class Health : MonoBehaviour
 		{
 		Die();
 		}
-	}
+		healthBar.Hurt();
+
+    }
     public void heal (float amount) 
 	{
 		currentHealth = currentHealth + amount;
 		if (currentHealth > maxHealth){currentHealth = maxHealth;}
-	}
+        healthBar.Hurt();
+    }
 
     public void Die () 
 	{

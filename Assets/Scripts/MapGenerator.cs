@@ -18,17 +18,27 @@ public class MapGenerator : MonoBehaviour
 	public int mapRow;
 	public Tile[,] grid;
 
-
-	public void Start()
+	public void randomTypeRandom() 
 	{
-	InitializeRandom();
-	GenerateMap();
-	}
-	
-	public void Update(){}
+        randomType = RandomType.Random;
+    }
 
+    public void randomTypeSeeded()
+    {
+        randomType = RandomType.Seeded;
+    }
+    
+	public void randomTypeMapOfTheDay()
+    {
+        randomType = RandomType.MapOfTheDay;
+    }
 
-	public void InitializeRandom()
+	public void SetSeed(int ChosenSeed) 
+	{
+		seed = ChosenSeed;
+    }
+
+    public void InitializeRandom()
 	{
 		if (randomType == RandomType.Seeded)
 		{

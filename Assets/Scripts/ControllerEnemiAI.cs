@@ -21,8 +21,19 @@ public override void Start()
 	pawn = GetComponent<Pawn>();
 	transitionChangeTime = Time.deltaTime;
 	target = GameObject.Find("Player(Clone)").GetComponent<Transform>();
-	}
+        if (target == null)
+        {
+            target = GameObject.Find("Player 1(Clone)").GetComponent<Transform>();
+        }
+    }
 
+	public void Update() 
+	{
+        if (target == null)
+        {
+            target = GameObject.Find("Player 1(Clone)").GetComponent<Transform>();
+        }
+    }
 
 public void ChangeState (AIState newState)
 	{

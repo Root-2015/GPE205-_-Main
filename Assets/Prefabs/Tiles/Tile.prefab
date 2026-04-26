@@ -454,6 +454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6631680385078675915}
   - component: {fileID: 664103562600941838}
+  - component: {fileID: 8398467455516227827}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Untagged
@@ -498,6 +499,18 @@ MonoBehaviour:
   doorEast: {fileID: 1140994575876902055}
   doorSouth: {fileID: 8196617192448909322}
   doorWest: {fileID: 4200237226194131426}
+--- !u!114 &8398467455516227827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7795345371218442339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515ebf9d76f0e114cbd15fe67beedf43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NotIndestructable
 --- !u!1 &8196617192448909322
 GameObject:
   m_ObjectHideFlags: 0

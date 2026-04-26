@@ -5,14 +5,14 @@ public class ControllerEnemyChaser : ControllerEnemiAI
   public override void Start()
 	{
 	GameManager.instance.players.Add(this);
-	
-	base.Start();
+        base.Start();
 	}
 
    public void Update()
 	{
 		MakeDecisions();
-	}
+        base.Update();
+    }
 
 
 
