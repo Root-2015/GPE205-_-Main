@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject pawnTwoPrefab;
     public GameObject pawnOnePrefab;
     public GameObject playerPawnPrefab;
+	public GameObject EnemyPlayerTank;
     private MapGenerator generator;
     public SettingsUI SettingsManager;
 
@@ -66,6 +67,7 @@ public class GameManager : MonoBehaviour
             Controller tempPlayerController = SpawnController(playerOnePrefab);
             //Makes them possess each other
             tempPlayerController.Possess(tempTankPawn);
+            Instantiate<GameObject>(EnemyPlayerTank, new Vector3(50, 0, 50), Quaternion.identity);
         }
 
     }
@@ -79,7 +81,7 @@ public class GameManager : MonoBehaviour
 
     public Pawn SpawnTank2(GameObject prefab)
     {
-        GameObject tempTankObject = Instantiate<GameObject>(prefab, new Vector3(0,0,5), Quaternion.identity);
+        GameObject tempTankObject = Instantiate<GameObject>(prefab, new Vector3(50,0,50), Quaternion.identity);
         return tempTankObject.GetComponent<Pawn>();
     }
 

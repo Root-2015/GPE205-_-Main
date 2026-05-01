@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
 	public GameObject Credits;
 	public GameObject GameOver;
     public GameObject GameOverMultiplayer;
+    public GameObject GameOverMultiplayer2;
     public GameObject OnePlayerUI;
     public GameObject TwoPlayerUI;
 	public SettingsUI SettingsManager;
@@ -98,6 +99,7 @@ public class UIManager : MonoBehaviour
 		Credits.SetActive(false);
 		GameOver.SetActive(false);
         GameOverMultiplayer.SetActive(false);
+        GameOverMultiplayer2.SetActive(false);
         OnePlayerUI.SetActive(false);
         TwoPlayerUI.SetActive(false);
     }

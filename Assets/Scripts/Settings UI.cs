@@ -6,7 +6,7 @@ public class SettingsUI : MonoBehaviour
 {
     [SerializeField] private TMP_Dropdown mapDropdown;
     [SerializeField] private TMP_InputField Seed;
-    public int IsMultiplayerOn = 0;
+    public int IsMultiplayerOn = 1;
     private MapGenerator generator;
 
     public void Start()
@@ -45,12 +45,12 @@ public class SettingsUI : MonoBehaviour
         if (toggleValue)
         {
             Debug.Log("Multiplayer On");
-            IsMultiplayerOn = 1;
+            IsMultiplayerOn = 0;
         }
         else 
         {
             Debug.Log("Multiplayer Off");
-            IsMultiplayerOn = 0;
+            IsMultiplayerOn = 1;
         }
     }
 
